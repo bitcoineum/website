@@ -8,8 +8,6 @@ In order to start the seed use:
 
 
 ```bash
-$ git clone --depth 1 https://github.com/mgechev/angular-seed.git
-$ cd angular-seed
 
 # install the project's dependencies
 $ npm install
