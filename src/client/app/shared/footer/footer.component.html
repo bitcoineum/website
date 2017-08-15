@@ -11,7 +11,9 @@
         <div class="col-sm-6 col-md-3">
             <div class="caption">
                 <h4 style="color:#FFFFFF">MENU</h4>
-                <h4 style="color:#FFFFFF">FAQ
+                <h4 style="color:#FFFFFF">
+                    <a style="color:#FFFFFF" [routerLink]="['/faq']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">FAQ</a>
+
                 </h4>
                 <h4 style="color:#FFFFFF">
                     <a [href]="pdfUrl" style="color:#FFFFFF">WHITE PAPER</a>
@@ -20,7 +22,9 @@
                     <a [href]="mainPdfUrl" style="color:#FFFFFF">MANIFESTO</a>
 
                 </h4>
-                <h4 style="color:#FFFFFF">CONTACT</h4>
+                <h4 style="color:#FFFFFF">
+                    <a href="mailto:bitcoineum@protonmail.ch" style="color:#FFFFFF">CONTACT</a>
+                </h4>
             </div>
         </div>
         <div class="col-sm-6 col-md-3">
