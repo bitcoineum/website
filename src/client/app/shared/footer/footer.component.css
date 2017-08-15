@@ -1,0 +1,31 @@
+.bte-footer {
+    font-family: PingFangSC-Semibold;
+    font-size: 32px;
+    background: #4B4B4B;
+    letter-spacing: 0;
+    padding-left: 101px;
+    padding-right: 101px;
+    padding-top: 49px;
+    padding-bottom: 100px;
+}
+
+.footer-remark {
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.main {
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-family: PingFangSC-Medium;
+    font-size: 28px;
+    color: #FF773B;
+    letter-spacing: 0;
+    border: none;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 39px;
+    padding-right: 39px;
+}
