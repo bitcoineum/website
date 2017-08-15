@@ -74,3 +74,17 @@
     color: #323232;
     letter-spacing: 0;
 }
+
+.main {
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-family: PingFangSC-Medium;
+    font-size: 28px;
+    color: #FF773B;
+    letter-spacing: 0;
+    border: none;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 39px;
+    padding-right: 39px;
+}
