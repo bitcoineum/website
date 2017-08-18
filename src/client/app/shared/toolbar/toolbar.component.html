@@ -19,14 +19,19 @@
                 <li><a href="#">Miner</a></li>
                 <li><a href="mailto:bitcoineum@protonmail.ch">Contact</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" (click)="selectLanguage('ch')" *ngIf="lang !== 'ch'" role="button" aria-haspopup="true" aria-expanded="false">
+                        
+                        
+                        Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li>
+                            <a (click)="selectLanguage('ch')" *ngIf="lang !== 'ch'">ch</a>
+                        </li>
+                        <li>
+                            <a (click)="selectLanguage('en-US')" *ngIf="lang !== 'en-US'">English</a>
+                        </li>
                     </ul>
+
                 </li>
             </ul>
         </div>

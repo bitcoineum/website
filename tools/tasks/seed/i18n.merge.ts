@@ -63,7 +63,9 @@ gulp.task('merge_translations_i18n', function () {
 });
 
 gulp.task('copy_source_i18n', function () {
+  console.log('========' + args.lang);
   let locDef = args.lang ? args.lang : 'en';
+  console.log(locDef);
   return gulp.src(join(Config.TMP_DIR, 'messages.xlf'))
     .pipe(plugins.rename(`messages.${locDef}.xlf`))
     .pipe(langEmpty ? gulp.dest(Config.LOCALE_DEST) : plugins.util.noop());
