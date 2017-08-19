@@ -16,15 +16,18 @@ export class HomeComponent implements OnInit {
   errorMessage: string;
   names: any[] = [];
   pdfUrl: string = 'http://www.bitcoineum.com/assets/Bitcoineum.pdf';
-  mainPdfUrl: string = 'http://bitcoineum.com/assets/BitcoineumManifesto.pdf';
-
+  mainPdfUrl: string = localStorage.getItem('lang') === 'EN' ? 'http://bitcoineum.com/assets/BitcoineumManifesto.pdf': 'http://bigshark.club/bitcoineum_white_paper_cn.pdf';
+whitePaper: string = localStorage.getItem('lang') === 'EN' ?  'White Paper' : '白皮书';
+lang: string = localStorage.getItem('lang');
   /**
    * Creates an instance of the HomeComponent with the injected
    * NameListService.
    *
    * @param {NameListService} nameListService - The injected NameListService.
    */
-  constructor(public nameListService: NameListService) { }
+  constructor(public nameListService: NameListService) {
+    console.log(localStorage.getItem('lang'))
+   }
 
   /**
    * Get the names OnInit

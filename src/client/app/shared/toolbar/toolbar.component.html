@@ -10,19 +10,28 @@
       </button>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling *ngIf="lang !== 'EN'"-->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-                <li><a [routerLink]="['/faq']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">FAQ</a></li>
-                <li><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">About</a></li>
-                <li><a href="#">Miner</a></li>
-                <li><a href="mailto:bitcoineum@protonmail.ch">Contact</a></li>
+                <li *ngIf="lang === 'EN'"><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+                <li *ngIf="lang !== 'EN'"><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">首页</a></li>
+                
+                <li *ngIf="lang === 'EN'"><a [routerLink]="['/faq']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">FAQ</a></li>
+                <li *ngIf="lang !== 'EN'"><a [routerLink]="['/faq']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">问答板块</a></li>
+                
+                <li *ngIf="lang === 'EN'"><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">About</a></li>
+                <li *ngIf="lang !== 'EN'"><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">关于我们</a></li>
+                
+                <li *ngIf="lang === 'EN'"><a href="#">Miner</a></li>
+                <li *ngIf="lang !== 'EN'"><a href="#">矿池</a></li>
+                <li *ngIf="lang === 'EN'"><a href="mailto:bitcoineum@protonmail.ch">Contact</a></li>
+                <li *ngIf="lang !== 'EN'"><a href="mailto:bitcoineum@protonmail.ch">联系方式</a></li>
+                
                 <li class="dropdown select-bte">
 
 
-                        <select class="form-control select-btn" id="power" required>
-                                <option *ngFor="let pow of langArray" [value]="pow">{{pow}}</option>
+                        <select class="form-control select-btn" id="power" (click)="changeLang($event)"  required>
+                                <option *ngFor="let pow of langArray" [value]="pow" >{{pow}}</option>
                               </select>
                 </li>
             </ul>

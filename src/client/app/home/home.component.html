@@ -11,67 +11,101 @@
 ">
     <img src="assets/img/logo.png" alt="...">
 
-    <h2 class="bte-title" i18n="@@introductionHeader">BITCOINEUM</h2>
-    <p class="bte-tip">Bitcoin + Ethereum = </p>
-    <p class="bte-tip">Trustless. Decentralized. Autonomous.Digital gold meets smart contracts.</p>
-    <p><a class="btn btn-primary btn-lg paper-btn" [href]="pdfUrl" role="button">White Paper > </a></p>
+    <h2 class="bte-title" *ngIf="lang === 'EN'">BITCOINEUM</h2>
+    <h2 class="bte-title" *ngIf="lang !== 'EN'">比特坊</h2>
+    
+    <p class="bte-tip" *ngIf="lang === 'EN'">Bitcoin + Ethereum = </p>
+    <p class="bte-tip" *ngIf="lang !== 'EN'">比特币 + 以太坊 = </p>
+    
+    <p class="bte-tip" *ngIf="lang === 'EN'">Trustless. Decentralized. Autonomous.Digital gold meets smart contracts.</p>
+    <p class="bte-tip" *ngIf="lang !== 'EN'">去信任，分布式，自主性。数字黄金结合智能合约. </p>
+    
+    <p><a class="btn btn-primary btn-lg paper-btn" [href]="pdfUrl" role="button">{{whitePaper}} > </a></p>
 </div>
 <div class="row" style="    margin-top: 100px;">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail bte-border">
             <div class="caption">
-                <h4>Trustless</h4>
-                <p class="bte-remark">
+                <h4 *ngIf="lang === 'EN'">Trustless</h4>
+                <h4 *ngIf="lang !== 'EN'">去信任</h4>
+                
+                <p *ngIf="lang === 'EN'" class="bte-remark">
                     Bitcoineum runs as an Autonomous Decentralized Application responsible for generating coins through a synthetic mining process. Designed to be immune from human intervention and replacing flawed governence with immutability.
                 </p>
+                <p *ngIf="lang !== 'EN'" class="bte-remark">
+                        比特坊作为一个自主的分布式应用程序运行，通过复合挖矿方式生成代币。
+                        分                    </p>
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail bte-border">
             <div class="caption">
-                <h4>Decentralized</h4>
-                <p class="bte-remark">
+                <h4 *ngIf="lang === 'EN'">Decentralized</h4>
+                <h4 *ngIf="lang !== 'EN'">分布式</h4>
+                
+                <p *ngIf="lang === 'EN'" class="bte-remark">
                     Running on top of the Ethereum blockchain as an ERC20 token provides seamless interoperability across a range of smart contract services. Users have control of coin creation, not entrenched mining interests.
                 </p>
+                <p *ngIf="lang !== 'EN'" class="bte-remark">
+                        作为一种运行在以太坊区块链上的ERC20代币，可以和一系列智能合约服务实现无缝对接。
+                    </p>
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail bte-border">
             <div class="caption">
-                <h4>Value</h4>
-                <p>
+                <h4 *ngIf="lang === 'EN'">Value</h4>
+                <h4 *ngIf="lang !== 'EN'">价值</h4>
+                
+                <p *ngIf="lang === 'EN'">
                     Bitcoineum emulates Bitcoin's semantics, preserves the 21 Million coin cap. A strong store of value with access to Ethereum's native smart contract ecosystem and interoperability across a wide range of on chain instruments. Brings Bitcoin capabilities
                     into Ethereum, rather than strapping smart contracts onto Bitcoin.
                 </p>
+                <p *ngIf="lang !== 'EN'">
+                        比特坊仿效比特币的意图，设定了2100万的代币供应总量。因为可以访问Ethereum的本土智能合约系统，并且和各种各样的在线工具实现互操作，所以其具有强大的价值存储功能。比特坊是将比特币的功能带入了到了以太坊中，而不是将智能合约捆绑到比特币上。
+                        
+                    </p>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="jumbotron bar-orange">
-        <h3 class="bar-three-title">It is Time for a change</h3>
-        <p class="col-sm-6 col-md-2"></p>
-        <p class="col-sm-6 col-md-8 bar-three-remark">
+        <h3 *ngIf="lang === 'EN'" class="bar-three-title">It is Time for a change</h3>
+        <h3 *ngIf="lang !== 'EN'" class="bar-three-title">是时候做出改变了！</h3>
+        
+        <p  class="col-sm-6 col-md-2"></p>
+        <p *ngIf="lang === 'EN'" class="col-sm-6 col-md-8 bar-three-remark">
             Something is wrong in Crypto. It is becoming increasingly obvious that even a system with extensive checks and balances, and designed to withstand governments is ultimately vulnerable to human greed and manipulation. Bitcoineum changes this equation,
             and introduces a new digital gold standard.
         </p>
+        <p *ngIf="lang !== 'EN'" class="col-sm-6 col-md-8 bar-three-remark">
+                加密货币的发展已经出现了偏差。即使是一个旨在防范政府，且存在完善制衡机制的系统，在面临人类的操控和贪欲时还是会处于劣势，而且像这种现象正在变得越来越明显。
+                Bitcoineum改变了这种情况，并引入了一个新的数字黄金标准。
+            </p>
         <p class="col-sm-6 col-md-2"></p>
         <p class="col-sm-6 col-md-12"><a class="btn btn-primary main" [href]="mainPdfUrl" role="button">Manifesto > </a></p>
 
     </div>
 
 </div>
-<h3 style="text-align: center">How do I get it?</h3>
+<h3 *ngIf="lang === 'EN'" style="text-align: center">How do I get it?</h3>
+<h3 *ngIf="lang !== 'EN'" style="text-align: center">怎样获得比特坊的代币？</h3>
+
 <div class="row">
     <div class="col-sm-6 col-md-2"></div>
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail bte-border">
             <div class="caption">
                 <img src="assets/img/Group.png" alt="...">
-                <h4 class="bar-four-title">Exchanges</h4>
-                <p class="bar-four-remark">As an ERC20 token Bitcoineum will be tradable on any exchange that supports the standard. Users that wish to hedge their Ethereum with an on-chain instrument will be able to do so easily, and keep value within the Ethereum ecosystem.</p>
+                <h4 *ngIf="lang === 'EN'" class="bar-four-title">Exchanges</h4>
+                <h4 *ngIf="lang !== 'EN'" class="bar-four-title">交易所</h4>
+                
+                <p *ngIf="lang === 'EN'" class="bar-four-remark">As an ERC20 token Bitcoineum will be tradable on any exchange that supports the standard. Users that wish to hedge their Ethereum with an on-chain instrument will be able to do so easily, and keep value within the Ethereum ecosystem.</p>
+                <p *ngIf="lang !== 'EN'" class="bar-four-remark">作为一种ERC20代币，比特坊可以在任何支持ERC20标准的交易平台上进行交易。那些希望通过在线方式对冲以太坊的用户将会很容易实现目标，并在Ethereum生态系统内保持价值。</p>
+                
             </div>
         </div>
     </div>
@@ -79,15 +113,20 @@
         <div class="thumbnail bte-border">
             <div class="caption">
                 <img src="assets/img/dice.png" alt="...">
-                <h4 class="bar-four-title">User Mining</h4>
-                <p class="bar-four-remark">As an ERC20 token Bitcoineum will be tradable on any exchange that supports the standard. Users that wish to hedge their Ethereum with an on-chain instrument will be able to do so easily, and keep value within the Ethereum ecosystem.</p>
+                <h4 *ngIf="lang === 'EN'" class="bar-four-title">User Mining</h4>
+                <h4 *ngIf="lang !== 'EN'" class="bar-four-title">用户挖矿</h4>
+                
+                <p *ngIf="lang === 'EN'" class="bar-four-remark">As an ERC20 token Bitcoineum will be tradable on any exchange that supports the standard. Users that wish to hedge their Ethereum with an on-chain instrument will be able to do so easily, and keep value within the Ethereum ecosystem.</p>
+                <p *ngIf="lang !== 'EN'" class="bar-four-remark">用户有一定概率可以通过挖矿获得新的比特坊。这是一种独特的概率挖掘算法，模拟Bitcoin背后的挖掘逻辑，但并不需要专门的硬件就可参与。 用户有权力质押以太坊以获得区块奖励并扩大货币供应量。</p>
+                
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-2"></div>
 
 </div>
-<h3 style="text-align: center;margin-bottom: 53px;">Features</h3>
+<h3  style="text-align: center;margin-bottom: 53px;">Features</h3>
+
 <div class="container">
     <table class="table table-striped">
         <tr class="bte-border">
