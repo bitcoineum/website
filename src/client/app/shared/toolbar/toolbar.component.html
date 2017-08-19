@@ -22,7 +22,7 @@
                 <li *ngIf="lang === 'EN'"><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">About</a></li>
                 <li *ngIf="lang !== 'EN'"><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">关于我们</a></li>
                 
-                <li *ngIf="lang === 'EN'"><a href="#">Miner</a></li>
+                <li *ngIf="lang === 'EN'"><a href="/miner/">Miner</a></li>
                 <li *ngIf="lang !== 'EN'"><a href="#">矿池</a></li>
                 <li *ngIf="lang === 'EN'"><a href="mailto:bitcoineum@protonmail.ch">Contact</a></li>
                 <li *ngIf="lang !== 'EN'"><a href="mailto:bitcoineum@protonmail.ch">联系方式</a></li>
