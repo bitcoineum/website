@@ -8,3 +8,13 @@
     color: #FFFFFF;
     letter-spacing: 0;
 }
+
+.select-bte{
+    margin-top: 14px;
+}
+
+.select-btn{
+    background: #000000 !important;
+    color: white;
+    border:  none;
+}

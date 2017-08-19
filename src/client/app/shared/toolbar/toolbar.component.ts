@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 })
 export class ToolbarComponent {
   public lang: string;
+  langArray: any = ['EN', '中文'];
   public constructor() {
     try {
       this.lang = localStorage.getItem('lang') || 'en-US';
