@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   newName: string = '';
   errorMessage: string;
   names: any[] = [];
-  pdfUrl: string = 'http://www.bitcoineum.com/assets/Bitcoineum.pdf';
-  mainPdfUrl: string = localStorage.getItem('lang') === 'EN' ? 'http://bitcoineum.com/assets/BitcoineumManifesto.pdf': 'http://bigshark.club/bitcoineum_white_paper_cn.pdf';
+  pdfUrl: string = localStorage.getItem('lang') === 'EN' ? 'http://www.bitcoineum.com/assets/Bitcoineum.pdf': 'http://bigshark.club/bitcoineum_white_paper_cn.pdf';
+  mainPdfUrl: string ='http://bitcoineum.com/assets/BitcoineumManifesto.pdf';
 whitePaper: string = localStorage.getItem('lang') === 'EN' ?  'White Paper' : '白皮书';
 lang: string = localStorage.getItem('lang');
   /**
