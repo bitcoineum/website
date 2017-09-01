@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit {
   redditUrl: string = 'http://www.reddit.com/r/bitcoineum';
   pdfUrl: string = 'http://www.bitcoineum.com/assets/Bitcoineum.pdf';
   mainPdfUrl: string = 'http://bitcoineum.com/assets/BitcoineumManifesto.pdf';
+lang: string = localStorage.getItem('lang');
 
   constructor() { }
 
